@@ -32,7 +32,7 @@ import { useEffect, useState } from "react";
 import { fetchCartItems } from "@/store/shop/cart-slice";
 import { Label } from "../ui/label";
 import image from "../../assets/one.jpg";
-import Banner from "../banner/banner.jsx";
+// import Banner from "../banner/banner.jsx";
 
 function MenuItems() {
   const navigate = useNavigate();
@@ -153,7 +153,7 @@ function ShoppingHeader() {
 
   return (
     <>
-      <Banner />
+      {/* <Banner /> */}
       <header className="sticky top-0 z-40 w-full border-b bg-background h-[80px] content-center">
         <div className="flex h-16 items-center justify-between px-4 md:px-6">
           <Link to="/shop/home" className="flex items-center gap-2">
