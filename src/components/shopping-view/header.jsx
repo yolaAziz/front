@@ -32,7 +32,7 @@ import { useEffect, useState } from "react";
 import { fetchCartItems } from "@/store/shop/cart-slice";
 import { Label } from "../ui/label";
 import image from "../../assets/one.jpg";
-import Banner from "../banner/Banner";
+import Banner from "../banner/banner.jsx";
 
 function MenuItems() {
   const navigate = useNavigate();
