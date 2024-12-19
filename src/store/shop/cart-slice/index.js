@@ -13,7 +13,7 @@ export const addToCart = createAsyncThunk(
   "cart/addToCart",
   async ({ userId, productId, quantity, color, additionalDetails  }) => {
     const response = await axios.post(
-      `${baseURL}/api/shop/cart/add`,
+      `https://backend-production-404f.up.railway.app/api/shop/cart/add`,
       {
         userId,
         productId,
@@ -30,7 +30,7 @@ export const fetchCartItems = createAsyncThunk(
   "cart/fetchCartItems",
   async (userId) => {
     const response = await axios.get(
-      `${baseURL}/api/shop/cart/get/${userId}`
+      `https://backend-production-404f.up.railway.app/api/shop/cart/get/${userId}`
     );
     return response.data;
   }
@@ -40,7 +40,7 @@ export const deleteCartItem = createAsyncThunk(
   "cart/deleteCartItem",
   async ({ userId, productId }) => {
     const response = await axios.delete(
-      `${baseURL}/api/shop/cart/${userId}/${productId}`
+      `https://backend-production-404f.up.railway.app/api/shop/cart/${userId}/${productId}`
     );
     return response.data;
   }
@@ -50,7 +50,7 @@ export const updateCartQuantity = createAsyncThunk(
   "cart/updateCartQuantity",
   async ({ userId, productId, quantity, color }) => {
     const response = await axios.put(
-      `${baseURL}/api/shop/cart/update-cart`,
+      `https://backend-production-404f.up.railway.app/api/shop/cart/update-cart`,
       {
         userId,
         productId,

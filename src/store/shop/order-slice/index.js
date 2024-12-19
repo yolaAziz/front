@@ -14,7 +14,7 @@ export const createNewOrder = createAsyncThunk(
   "/order/createNewOrder",
   async (orderData) => {
     const response = await axios.post(
-      `${baseURL}/api/shop/order/create`,
+      `https://backend-production-404f.up.railway.app/api/shop/order/create`,
       orderData
     );
     return response.data; // يجب أن تتضمن البيانات paymentKey
@@ -26,7 +26,7 @@ export const createNewPayment = createAsyncThunk(
   "/order/createNewPayment",
   async (orderData) => {
     const response = await axios.post(
-      `${baseURL}/api/payment/paymob`,
+      `https://backend-production-404f.up.railway.app/api/payment/paymob`,
       orderData
     );
 
@@ -38,7 +38,7 @@ export const capturePayment = createAsyncThunk(
   "/order/capturePayment",
   async ({ paymentId, payerId, orderId }) => {
     const response = await axios.post(
-      `${baseURL}/api/shop/order/capture`,
+      `https://backend-production-404f.up.railway.app/api/shop/order/capture`,
       {
         paymentId,
         payerId,
@@ -56,7 +56,7 @@ export const getAllOrdersByUserId = createAsyncThunk(
   "/order/getAllOrdersByUserId",
   async (userId) => {
     const response = await axios.get(
-      `${baseURL}/api/shop/order/list/${userId}`
+      `https://backend-production-404f.up.railway.app/api/shop/order/list/${userId}`
     );
 
     return response.data;
@@ -67,7 +67,7 @@ export const getOrderDetails = createAsyncThunk(
   "/order/getOrderDetails",
   async (id) => {
     const response = await axios.get(
-      `${baseURL}/api/shop/order/details/${id}`
+      `https://backend-production-404f.up.railway.app/api/shop/order/details/${id}`
     );
 
     return response.data;

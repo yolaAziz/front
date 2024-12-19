@@ -19,7 +19,7 @@ export const fetchAllFilteredProducts = createAsyncThunk(
     });
 
     const result = await axios.get(
-      `${baseURL}/api/shop/products/get?${query}`
+      `https://backend-production-404f.up.railway.app/api/shop/products/get?${query}`
     );
 
     console.log(result);
@@ -34,7 +34,7 @@ export const fetchProductDetails = createAsyncThunk(
   async (id) => {
 
     const result = await axios.get(
-      `${baseURL}/api/shop/products/get/${id}`
+      `https://backend-production-404f.up.railway.app/api/shop/products/get/${id}`
     );
 
     return result?.data;
