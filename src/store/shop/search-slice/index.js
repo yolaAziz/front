@@ -12,7 +12,7 @@ export const getSearchResults = createAsyncThunk(
   "/order/getSearchResults",
   async (keyword) => {
     const response = await axios.get(
-      `https://backend-production-404f.up.railway.app/api/shop/search/${keyword}`
+      `${baseURL}/api/shop/search/${keyword}`
     );
 
     return response.data;

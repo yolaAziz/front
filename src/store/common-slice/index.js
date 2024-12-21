@@ -12,7 +12,7 @@ export const getFeatureImages = createAsyncThunk(
   "/order/getFeatureImages",
   async () => {
     const response = await axios.get(
-      `https://backend-production-404f.up.railway.app/api/common/feature/get`
+      `${baseURL}/api/common/feature/get`
     );
 
     return response.data;
@@ -23,7 +23,7 @@ export const addFeatureImage = createAsyncThunk(
   "/order/addFeatureImage",
   async (image) => {
     const response = await axios.post(
-      `https://backend-production-404f.up.railway.app/api/common/feature/add`,
+      `${baseURL}/api/common/feature/add`,
       { image }
     );
 
@@ -35,7 +35,7 @@ export const deleteFeatureImage = createAsyncThunk(
   "/order/addFeatureImage",
   async (image) => {
     const response = await axios.delete(
-      `https://backend-production-404f.up.railway.app/api/common/feature/delete`,
+      `${baseURL}/api/common/feature/delete`,
       { image }
     );
 

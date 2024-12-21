@@ -188,7 +188,7 @@ function ShoppingCheckout() {
 
       // طلب POST إلى السيرفر لإنشاء الطلب
       const response = await fetch(
-        `https://backend-production-404f.up.railway.app/api/shop/order/create`,
+        `${baseURL}/api/shop/order/create`,
         {
           method: "POST",
           headers: {

@@ -15,7 +15,7 @@ export const registerUser = createAsyncThunk(
 
   async (formData) => {
     const response = await axios.post(
-      `https://backend-production-404f.up.railway.app/api/auth/register`,
+      `${baseURL}/api/auth/register`,
       formData,
       {
         withCredentials: true,
@@ -31,7 +31,7 @@ export const loginUser = createAsyncThunk(
 
   async (formData) => {
     const response = await axios.post(
-      `https://backend-production-404f.up.railway.app/api/auth/login`,
+      `${baseURL}/api/auth/login`,
       formData,
       {
         withCredentials: true,
@@ -47,7 +47,7 @@ export const logoutUser = createAsyncThunk(
 
   async () => {
     const response = await axios.post(
-      `https://backend-production-404f.up.railway.app/api/auth/logout`,
+      `${baseURL}/api/auth/logout`,
       {},
       {
         withCredentials: true,
@@ -63,7 +63,7 @@ export const checkAuth = createAsyncThunk(
 
   async () => {
     const response = await axios.get(
-      `https://backend-production-404f.up.railway.app/api/auth/check-auth`,
+      `${baseURL}/api/auth/check-auth`,
       {
         withCredentials: true,
         headers: {
